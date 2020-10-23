@@ -20,7 +20,7 @@
       </li>
       <li>
         <a href="https://github.com/Mariotti7"
-          ><i class="fa fa-globe"></i> Meu Github</a
+           target="_blank"><i class="fa fa-globe"></i> Meu Github</a
         >
       </li>
     </ul>
@@ -30,18 +30,20 @@
       <div>
         <form class="txt-style" action="">
           <label for="nome">Nome:</label><br />
-          <input type="text" id="nome" />
-          <br />
+          <input type="text" id="nome" onkeyup="validaNome()"/>
+          <div id="txt-nome"></div><!-- div criada para mostrar o conteudo da função -->
           <br />
           <label for="email">E-mail:</label><br />
-          <input type="email" id="email" />
-          <br />
+          <input type="email" id="email" onkeyup="validaEmail()" />
+          <div id="txt-email"></div>
           <br />
           <label for="assunto">Assunto:</label><br />
-          <textarea name="assunto" id="assunto" cols="60" rows="5"></textarea>
+          <textarea name="assunto" id="assunto" cols="60" rows="5" onkeyup="validaAssunto()"></textarea>
+          <div id="txt-assunto"></div>
+          <br>
           <br />
-          <br />
-          <button class="button">Enviar</button>
+          <button class="button" onclick="enviar()">Enviar</button>
+          <div id="txt-botao"></div>
         </form>
       </div>
 
@@ -54,7 +56,7 @@
           style="border: 0"
           allowfullscreen=""
           aria-hidden="false"
-          tabindex="0"
+          tabindex="0" 
         ></iframe>
       </div>
     </div>
@@ -93,5 +95,6 @@
         Todos os direitos reservados para <b>LEANDRO MARIOTTI</b> &copy;
       </p>
     </footer>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
